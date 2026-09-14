@@ -1,5 +1,7 @@
 # devops-capstone-project
 
+![Build Status](https://github.com/mikaelacodes/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
+
 This project implements a customer accounts microservice for an e-commerce platform. It provides a RESTful API to create, read, update, delete, and list customer accounts, including basic information such as name, email, address, and phone number. The service is built with Python Flask, backed by a Postgres database, and is designed to be containerized with Docker and deployed to Kubernetes as part of a full DevOps pipeline.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -67,10 +69,10 @@ The code for the microservice is contained in the `service` package. All of the 
 
 ```text
 ├── service         <- microservice package
-│   ├── common/     <- common log and error handlers
-│   ├── config.py   <- Flask configuration object
-│   ├── models.py   <- code for the persistent model
-│   └── routes.py   <- code for the REST API routes
+│   ├── common/     <- common log and error handlers
+│   ├── config.py   <- Flask configuration object
+│   ├── models.py   <- code for the persistent model
+│   └── routes.py   <- code for the REST API routes
 ├── setup.cfg       <- tools setup config
 └── tests                       <- folder for all of the tests
     ├── factories.py            <- test factories
@@ -106,21 +108,21 @@ Please only use these commands for working stand-alone on your own computer with
 
 1. Bring up a local K3D Kubernetes cluster
 
-    ```bash
+```bash
     $ make cluster
-    ```
+```
 
 2. Install Tekton
 
-    ```bash
+```bash
     $ make tekton
-    ```
+```
 
 3. Install the ClusterTasks that the Cloud IDE has
 
-    ```bash
+```bash
     $ make clustertasks
-    ```
+```
 
 You can now perform Tekton development locally, just like in the Cloud IDE lab environment.
 
